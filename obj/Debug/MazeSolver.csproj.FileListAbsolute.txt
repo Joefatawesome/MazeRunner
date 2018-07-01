@@ -1,0 +1,10 @@
+F:\Documents\Comp Sci\C#\obj\Debug\MazeSolver.csprojResolveAssemblyReference.cache
+F:\Documents\Comp Sci\C#\obj\Debug\MazeSolver.Form1.resources
+F:\Documents\Comp Sci\C#\obj\Debug\MazeSolver.csproj.GenerateResource.cache
+F:\Documents\Comp Sci\C#\bin\Debug\MazeSolver.exe.config
+F:\Documents\Comp Sci\C#\bin\Debug\MazeSolver.exe
+F:\Documents\Comp Sci\C#\bin\Debug\MazeSolver.pdb
+F:\Documents\Comp Sci\C#\obj\Debug\MazeSolver.Properties.Resources.resources
+F:\Documents\Comp Sci\C#\obj\Debug\MazeSolver.csproj.CoreCompileInputs.cache
+F:\Documents\Comp Sci\C#\obj\Debug\MazeSolver.exe
+F:\Documents\Comp Sci\C#\obj\Debug\MazeSolver.pdb

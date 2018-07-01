@@ -1,0 +1,20 @@
+C:\Users\rick\Documents\CompSci\C#\MazeSolver\MazeSolver\bin\Debug\MazeSolver.exe.config
+C:\Users\rick\Documents\CompSci\C#\MazeSolver\MazeSolver\bin\Debug\MazeSolver.exe
+C:\Users\rick\Documents\CompSci\C#\MazeSolver\MazeSolver\bin\Debug\MazeSolver.pdb
+C:\Users\rick\Documents\CompSci\C#\MazeSolver\MazeSolver\obj\Debug\MazeSolver.csprojResolveAssemblyReference.cache
+C:\Users\rick\Documents\CompSci\C#\MazeSolver\MazeSolver\obj\Debug\MazeSolver.Form1.resources
+C:\Users\rick\Documents\CompSci\C#\MazeSolver\MazeSolver\obj\Debug\MazeSolver.Properties.Resources.resources
+C:\Users\rick\Documents\CompSci\C#\MazeSolver\MazeSolver\obj\Debug\MazeSolver.csproj.GenerateResource.cache
+C:\Users\rick\Documents\CompSci\C#\MazeSolver\MazeSolver\obj\Debug\MazeSolver.csproj.CoreCompileInputs.cache
+C:\Users\rick\Documents\CompSci\C#\MazeSolver\MazeSolver\obj\Debug\MazeSolver.exe
+C:\Users\rick\Documents\CompSci\C#\MazeSolver\MazeSolver\obj\Debug\MazeSolver.pdb
+F:\Documents\Comp Sci\C#\MazeSolver\MazeSolver\bin\Debug\MazeSolver.exe.config
+F:\Documents\Comp Sci\C#\MazeSolver\MazeSolver\bin\Debug\MazeSolver.exe
+F:\Documents\Comp Sci\C#\MazeSolver\MazeSolver\bin\Debug\MazeSolver.pdb
+F:\Documents\Comp Sci\C#\MazeSolver\MazeSolver\obj\Debug\MazeSolver.csprojResolveAssemblyReference.cache
+F:\Documents\Comp Sci\C#\MazeSolver\MazeSolver\obj\Debug\MazeSolver.Form1.resources
+F:\Documents\Comp Sci\C#\MazeSolver\MazeSolver\obj\Debug\MazeSolver.Properties.Resources.resources
+F:\Documents\Comp Sci\C#\MazeSolver\MazeSolver\obj\Debug\MazeSolver.csproj.GenerateResource.cache
+F:\Documents\Comp Sci\C#\MazeSolver\MazeSolver\obj\Debug\MazeSolver.csproj.CoreCompileInputs.cache
+F:\Documents\Comp Sci\C#\MazeSolver\MazeSolver\obj\Debug\MazeSolver.exe
+F:\Documents\Comp Sci\C#\MazeSolver\MazeSolver\obj\Debug\MazeSolver.pdb
