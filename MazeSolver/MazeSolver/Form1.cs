@@ -49,6 +49,7 @@ namespace MazeSolver
                 MessageBox.Show("(" + endX.ToString() + "," + endY.ToString() + ")", "End Pixel");
                 //start search
                 PixelNode finish = USearch();
+                //save output
                 SaveFileDialog sfd = new SaveFileDialog();
                 sfd.Filter = "PNG Image|*.png|JPG Image|*.jpg|BMP Image|*.bmp";
                 sfd.FileName = "outputMaze";
@@ -59,7 +60,7 @@ namespace MazeSolver
                     maze.Save(path);
                     imageFile = Image.FromFile(path);
                 }
-
+                //catch null pointers
                 try
                 {
                     MessageBox.Show(finish.myCoord.ToString());

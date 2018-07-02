@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace MazeSolver
-{
+{//Issue is probably where we compare and store unexplored/explored pixels
     public class PixelNodeComparator : IComparer<PixelNode>
     {
         public int Compare(PixelNode pn1, PixelNode pn2)
@@ -47,6 +47,7 @@ namespace MazeSolver
                     }
                 }
             }
+            //catching comparison error where we don't fit into one of these cases
             throw new Exception("Error in Compare method for PixelNode");
         }
     }
