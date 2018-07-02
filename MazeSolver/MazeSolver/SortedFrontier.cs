@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace MazeSolver
-{//Issue is probably where we compare and store unexplored/explored pixels
+{
+    //Issue is probably where we compare and store unexplored/explored pixels
     public class PixelNodeComparator : IComparer<PixelNode>
     {
         public int Compare(PixelNode pn1, PixelNode pn2)

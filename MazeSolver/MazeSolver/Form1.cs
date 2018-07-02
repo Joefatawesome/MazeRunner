@@ -60,9 +60,8 @@ namespace MazeSolver
                     maze.Save(path);
                     imageFile = Image.FromFile(path);
                 }
-                //catch null pointers
                 try
-                {
+                {//catch null pointers
                     MessageBox.Show(finish.myCoord.ToString());
                 }
                 catch(Exception myException)
