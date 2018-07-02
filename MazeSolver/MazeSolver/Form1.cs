@@ -48,7 +48,7 @@ namespace MazeSolver
                 MessageBox.Show("(" + startX.ToString() + "," + startY.ToString() + ")", "Start Pixel");
                 MessageBox.Show("(" + endX.ToString() + "," + endY.ToString() + ")", "End Pixel");
                 //start search
-                PixelNode finish = ASearch();
+                PixelNode finish = USearch();
                 SaveFileDialog sfd = new SaveFileDialog();
                 sfd.Filter = "PNG Image|*.png|JPG Image|*.jpg|BMP Image|*.bmp";
                 sfd.FileName = "outputMaze";
@@ -59,13 +59,14 @@ namespace MazeSolver
                     maze.Save(path);
                     imageFile = Image.FromFile(path);
                 }
+
                 try
                 {
                     MessageBox.Show(finish.myCoord.ToString());
                 }
                 catch(Exception myException)
                 {
-                    MessageBox.Show(myException.Message);
+                    MessageBox.Show(myException.Message +" This happened because the algorithm travelled outside of the Maze.");
                 }
             }
             else

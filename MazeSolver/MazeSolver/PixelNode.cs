@@ -37,7 +37,7 @@ namespace MazeSolver
             //{
             //    choices.RemoveAt(0);
             //}
-            System.Windows.Forms.MessageBox.Show(myCoord[0] + " " + myCoord[1]);
+            //System.Windows.Forms.MessageBox.Show(myCoord[0] + " " + myCoord[1]);
             Form1.maze.SetPixel(myCoord[0], myCoord[1], Color.Green);
             for(int i = 0; i<9; i++)
             {

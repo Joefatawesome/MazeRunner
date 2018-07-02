@@ -7,6 +7,8 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
+//The Purpose of this file is to solve the maze in a more basic way to help debugging.
+
 namespace MazeSolver
 {
     public partial class Form1 : Form

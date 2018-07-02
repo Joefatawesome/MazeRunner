@@ -9,6 +9,8 @@ namespace MazeSolver
         //public int[][] path = new int[9][]; //possible paths
         public bool[] checker = new bool[9]; //check out of bounds path or black pixel
         public int[] myDimensions;
+        int[] outOf = { -1, -1 }; //initialized outside of for loops. This value is used for pixels out of bounds.
+        Color deadColor = Color.Black; //initialized outside of for loops. This color is used for pixels out of bounds.
         public PixelPath(int x, int y, int[] dimension)
         {
             int tempX, tempY;
@@ -31,57 +33,10 @@ namespace MazeSolver
                     }
                     else
                     {//would be out of bitmap boundary
-                        int [] outOf = { -1, -1};
-                        Color deadColor = Color.Black;
                         path.Add(new pixel(outOf, deadColor));
                     }
                 }
             }
-            //tempX = x - 1;
-            //tempY = y + 1;
-            //temp[0] = tempX;
-            //temp[1] = tempY;
-            //path.Add(new pixel(temp, Form1.maze.GetPixel(temp[0], temp[1])));
-            //tempX = x;
-            //tempY = y + 1;
-            //temp[0] = tempX;
-            //temp[1] = tempY;
-            //path.Add(new pixel(temp, Form1.maze.GetPixel(temp[0], temp[1])));
-            //tempX = x + 1;
-            //tempY = y + 1;
-            //temp[0] = tempX;
-            //temp[1] = tempY;
-            //path.Add(new pixel(temp, Form1.maze.GetPixel(temp[0], temp[1])));
-            //tempX = x - 1;
-            //tempY = y;
-            //temp[0] = tempX;
-            //temp[1] = tempY;
-            //path.Add(new pixel(temp, Form1.maze.GetPixel(temp[0], temp[1])));
-            //tempX = x;
-            //tempY = y;
-            //temp[0] = tempX;
-            //temp[1] = tempY;
-            //path.Add(new pixel(temp, Form1.maze.GetPixel(temp[0], temp[1])));
-            //tempX = x + 1;
-            //tempY = y;
-            //temp[0] = tempX;
-            //temp[1] = tempY;
-            //path.Add(new pixel(temp, Form1.maze.GetPixel(temp[0], temp[1])));
-            //tempX = x - 1;
-            //tempY = y - 1;
-            //temp[0] = tempX;
-            //temp[1] = tempY;
-            //path.Add(new pixel(temp, Form1.maze.GetPixel(temp[0], temp[1])));
-            //tempX = x;
-            //tempY = y - 1;
-            //temp[0] = tempX;
-            //temp[1] = tempY;
-            //path.Add(new pixel(temp, Form1.maze.GetPixel(temp[0], temp[1])));
-            //tempX = x + 1;
-            //tempY = y - 1;
-            //temp[0] = tempX;
-            //temp[1] = tempY;
-            //path.Add(new pixel(temp, Form1.maze.GetPixel(temp[0], temp[1])));
             for (int i = 0; i < 9; i++)
             {
                 temp = path[i].getCoord();
@@ -101,3 +56,50 @@ namespace MazeSolver
         }
     }
 }
+
+
+//tempX = x - 1;
+//tempY = y + 1;
+//temp[0] = tempX;
+//temp[1] = tempY;
+//path.Add(new pixel(temp, Form1.maze.GetPixel(temp[0], temp[1])));
+//tempX = x;
+//tempY = y + 1;
+//temp[0] = tempX;
+//temp[1] = tempY;
+//path.Add(new pixel(temp, Form1.maze.GetPixel(temp[0], temp[1])));
+//tempX = x + 1;
+//tempY = y + 1;
+//temp[0] = tempX;
+//temp[1] = tempY;
+//path.Add(new pixel(temp, Form1.maze.GetPixel(temp[0], temp[1])));
+//tempX = x - 1;
+//tempY = y;
+//temp[0] = tempX;
+//temp[1] = tempY;
+//path.Add(new pixel(temp, Form1.maze.GetPixel(temp[0], temp[1])));
+//tempX = x;
+//tempY = y;
+//temp[0] = tempX;
+//temp[1] = tempY;
+//path.Add(new pixel(temp, Form1.maze.GetPixel(temp[0], temp[1])));
+//tempX = x + 1;
+//tempY = y;
+//temp[0] = tempX;
+//temp[1] = tempY;
+//path.Add(new pixel(temp, Form1.maze.GetPixel(temp[0], temp[1])));
+//tempX = x - 1;
+//tempY = y - 1;
+//temp[0] = tempX;
+//temp[1] = tempY;
+//path.Add(new pixel(temp, Form1.maze.GetPixel(temp[0], temp[1])));
+//tempX = x;
+//tempY = y - 1;
+//temp[0] = tempX;
+//temp[1] = tempY;
+//path.Add(new pixel(temp, Form1.maze.GetPixel(temp[0], temp[1])));
+//tempX = x + 1;
+//tempY = y - 1;
+//temp[0] = tempX;
+//temp[1] = tempY;
+//path.Add(new pixel(temp, Form1.maze.GetPixel(temp[0], temp[1])));

@@ -58,6 +58,7 @@ namespace MazeSolver
         {
             unexplored = new SortedSet<PixelNode>(new PixelNodeComparator());
         }
+
         public Boolean IsEmpty()
         {//check if empty
             if(!unexplored.Any())
@@ -66,6 +67,7 @@ namespace MazeSolver
             }
             return false;
         }
+
         public PixelNode PopTop()
         {//remove and return first element
             if(IsEmpty())
@@ -86,7 +88,7 @@ namespace MazeSolver
         }
 
         public void Remove(PixelNode pn)
-        {
+        {//remove PixelNode from unexplored
             unexplored.Remove(pn);
         }
 
