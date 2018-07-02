@@ -14,6 +14,10 @@ namespace MazeSolver
         public PixelPath(int x, int y, int[] dimension)
         {
             int tempX, tempY;
+            for (int i = 0; i < 9; i++)
+            {
+                checker[i] = true;
+            }
             int[] temp = new int[2];
             for(int i = -1; i < 2; i++)
             {
@@ -46,10 +50,6 @@ namespace MazeSolver
                 else if (tempColor.R == tempColor.G && tempColor.G == tempColor.B && tempColor.R == 0)
                 {
                     checker[i] = false; //black, don't use it
-                }
-                else
-                {
-                    checker[i] = true;
                 }
             }
             myDimensions = dimension;
