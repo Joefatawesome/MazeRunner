@@ -13,9 +13,7 @@ namespace MazeSolver
 {
     public partial class Form1 : Form
     {
-        //Need maze
-        //start pixel
-        //end pixel
+        //Need maze, start pixel, end pixel
         public PixelNode USearch()
         {
             Frontier myQueue = new Frontier();

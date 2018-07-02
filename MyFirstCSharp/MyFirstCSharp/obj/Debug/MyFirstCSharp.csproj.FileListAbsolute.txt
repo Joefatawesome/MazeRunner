@@ -1,7 +1,0 @@
-F:\Documents\Comp Sci\C#\MyFirstCSharp\MyFirstCSharp\bin\Debug\MyFirstCSharp.exe.config
-F:\Documents\Comp Sci\C#\MyFirstCSharp\MyFirstCSharp\bin\Debug\MyFirstCSharp.exe
-F:\Documents\Comp Sci\C#\MyFirstCSharp\MyFirstCSharp\bin\Debug\MyFirstCSharp.pdb
-F:\Documents\Comp Sci\C#\MyFirstCSharp\MyFirstCSharp\obj\Debug\MyFirstCSharp.csprojResolveAssemblyReference.cache
-F:\Documents\Comp Sci\C#\MyFirstCSharp\MyFirstCSharp\obj\Debug\MyFirstCSharp.csproj.CoreCompileInputs.cache
-F:\Documents\Comp Sci\C#\MyFirstCSharp\MyFirstCSharp\obj\Debug\MyFirstCSharp.exe
-F:\Documents\Comp Sci\C#\MyFirstCSharp\MyFirstCSharp\obj\Debug\MyFirstCSharp.pdb
