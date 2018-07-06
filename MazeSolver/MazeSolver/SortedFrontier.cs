@@ -23,7 +23,23 @@ namespace MazeSolver
             }
             else
             {
-                int result = pn1.myF.getCost().CompareTo(pn2.myF.getCost());
+                switch(Frontier.searchType)
+                {
+                    case "u":
+
+                        break;
+                    case "g":
+                        
+                        break;
+                    case "a":
+                        var heur1 = pn1.myF.getFCost();
+                        var heur2 = pn2.myF.getFCost();
+                        break;
+                    default:
+                        throw new Exception("Entered default case in cost calculation in SortedFrontier");
+                }
+                //TODO Set up U and A case. Fix code. Increment partial cost
+                int result = heur1.CompareTo(heur2);
                 if (result != 0)
                 {
                     return result;
@@ -56,11 +72,18 @@ namespace MazeSolver
     public class Frontier
     {
         SortedSet<PixelNode> unexplored;
+        public static string searchType;
         public Frontier()
         {
+            //default search
             unexplored = new SortedSet<PixelNode>(new PixelNodeComparator());
+            searchType = "a";
         }
-
+        public Frontier(string mySearch)
+        {
+            unexplored = new SortedSet<PixelNode>(new PixelNodeComparator());
+            searchType = mySearch;
+        }
         public Boolean IsEmpty()
         {//check if empty
             if(!unexplored.Any())

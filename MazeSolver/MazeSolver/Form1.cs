@@ -25,7 +25,7 @@ namespace MazeSolver
         public static int[] dimensions = new int[2];
         public static Bitmap maze; //note: y axis extends down rather than normal cartesian format
         public static int startX, startY, endX, endY; //x and y coordinates of red pixels and blue pixels
-
+        public static string searchType; //for search type. Used for cost calculation later
         private void button2_Click(object sender, EventArgs e)
         {
             pictureBox2.Image = imageFile;
@@ -48,7 +48,32 @@ namespace MazeSolver
                 MessageBox.Show("(" + startX.ToString() + "," + startY.ToString() + ")", "Start Pixel");
                 MessageBox.Show("(" + endX.ToString() + "," + endY.ToString() + ")", "End Pixel");
                 //start search
-                PixelNode finish = USearch();
+                PixelNode finish;
+                bool check = true;
+                
+                while (check)
+                {
+                    Console.WriteLine("Please type your prefered version of search: A, G, or U");
+                    searchType = Console.ReadLine();
+                    searchType.ToLower();
+                    switch (searchType)
+                    {
+                        case "u":
+                            finish = USearch();
+                            check = false;
+                            break;
+                        //case "g":
+                        //    PixelNode finish = GSearch();
+                        //break
+                        case "a":
+                            finish = ASearch();
+                            check = false;
+                            break;
+                        default:
+                            Console.WriteLine("Please type A, G, or U for your preferred search");
+                            break;
+                    }
+                }
                 //save output
                 SaveFileDialog sfd = new SaveFileDialog();
                 sfd.Filter = "PNG Image|*.png|JPG Image|*.jpg|BMP Image|*.bmp";

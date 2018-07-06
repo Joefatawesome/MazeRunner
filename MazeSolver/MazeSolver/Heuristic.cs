@@ -48,7 +48,7 @@ namespace MazeSolver
             hCost = new Heuristic(myCoord);
         }
 
-        public int getCost()
+        public int getFCost()
         {
             return hCost.getHCost() + pCost;
         }
