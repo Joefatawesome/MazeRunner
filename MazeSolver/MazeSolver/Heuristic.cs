@@ -52,5 +52,10 @@ namespace MazeSolver
         {
             return hCost.getHCost() + pCost;
         }
+
+        public void incPCost()
+        {
+            pCost++;
+        }
     }
 }

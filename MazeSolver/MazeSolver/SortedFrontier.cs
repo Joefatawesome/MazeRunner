@@ -23,17 +23,19 @@ namespace MazeSolver
             }
             else
             {
-                switch(Frontier.searchType)
+                int heur1, heur2;
+                switch (Frontier.searchType)
                 {
                     case "u":
-
+                        heur1 = pn1.myF.pCost;
+                        heur2 = pn2.myF.pCost;
                         break;
                     case "g":
-                        
-                        break;
+                        throw new Exception("Not Ready Yet");
+                    //break;
                     case "a":
-                        var heur1 = pn1.myF.getFCost();
-                        var heur2 = pn2.myF.getFCost();
+                        heur1 = pn1.myF.getFCost();
+                        heur2 = pn2.myF.getFCost();
                         break;
                     default:
                         throw new Exception("Entered default case in cost calculation in SortedFrontier");
@@ -60,15 +62,30 @@ namespace MazeSolver
                     }
                     else
                     {
-                        return pn1.prev.myF.getCost().CompareTo(pn2.prev.myF.getCost());
+
+                        switch (Frontier.searchType)
+                        {
+                            case "u":
+                                heur1 = pn1.prev.myF.pCost;
+                                heur2 = pn1.prev.myF.pCost;
+                                return heur1.CompareTo(heur2);
+                            case "g":
+                                throw new Exception("Not Ready Yet");
+                            //break;
+                            case "a":
+                                heur1 = pn1.prev.myF.getFCost();
+                                heur2 = pn2.prev.myF.getFCost();
+                                return heur1.CompareTo(heur2);
+                            default:
+                                throw new Exception("Entered default case in cost calculation in SortedFrontier");
+                        }
                     }
                 }
+                //catching comparison error where we don't fit into one of these cases
+                throw new Exception("Error in Compare method for PixelNode");
             }
-            //catching comparison error where we don't fit into one of these cases
-            throw new Exception("Error in Compare method for PixelNode");
         }
     }
-
     public class Frontier
     {
         SortedSet<PixelNode> unexplored;
@@ -86,7 +103,7 @@ namespace MazeSolver
         }
         public Boolean IsEmpty()
         {//check if empty
-            if(!unexplored.Any())
+            if (!unexplored.Any())
             {
                 return true;
             }
@@ -95,7 +112,7 @@ namespace MazeSolver
 
         public PixelNode PopTop()
         {//remove and return first element
-            if(IsEmpty())
+            if (IsEmpty())
             {
                 return null;
             }
@@ -121,10 +138,10 @@ namespace MazeSolver
         {//checks if unexplored contains this pixel
             foreach (PixelNode i in unexplored)
             {
-                for(int j = 0; j<9; j++)
+                for (int j = 0; j < 9; j++)
                 {
                     int[] temp = i.myPixel.path[j].getCoord();
-                    if ( temp[0] == x && temp[1] == y)
+                    if (temp[0] == x && temp[1] == y)
                     {
                         return true;
                     }

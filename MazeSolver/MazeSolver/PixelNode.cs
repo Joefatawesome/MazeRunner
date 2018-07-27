@@ -28,6 +28,7 @@ namespace MazeSolver
         {
             myPixel = pixel;
             myCoord = pixel.path[4].getCoord();
+            myF = new FCost(myCoord);
             prev = prevPixel;
         }
 
@@ -49,8 +50,8 @@ namespace MazeSolver
                 PixelNode choice = new PixelNode(temp, this);
                 if (choice.myPixel.checker[i] == true)
                 {
-                    choice.depth = this.depth + 1;
-                    choice.myF = this.myF;
+                    choice.depth = this.depth + 1;//add partial path cost increment in here
+                    choice.myF.incPCost(); ;
                     choices.Add(choice);
                 }
                 else

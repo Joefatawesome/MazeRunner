@@ -16,10 +16,15 @@ namespace MazeSolver
         {
             InitializeComponent();
         }
-
+        private TextBox textBoxInput = new TextBox();
         private void Form1_Load(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
+            //WindowState = FormWindowState.Maximized;
+            textBoxInput.Width = 250;
+            textBoxInput.Height = 50;
+            textBoxInput.BackColor = Color.Blue;
+            textBoxInput.ForeColor = Color.White;
+            textBoxInput.BorderStyle = BorderStyle.Fixed3D;
         }
         Image imageFile;
         public static int[] dimensions = new int[2];
@@ -30,7 +35,25 @@ namespace MazeSolver
         {
             pictureBox2.Image = imageFile;
         }
-
+        private void keyDownEvent(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.A)
+            {
+                textBoxInput.Text = "a";
+            }
+            else if (e.KeyCode == Keys.U)
+            {
+                textBoxInput.Text = "u";
+            }
+            else if (e.KeyCode == Keys.G)
+            {
+                textBoxInput.Text = "g";
+            }
+            else
+            {
+                textBoxInput.Text = "invalid";
+            }
+        }
         private void button1_Click_1(object sender, EventArgs e)
         {//This is set up to execute the entire alogrithm on successful file selection
             //grabbing image file
@@ -48,14 +71,14 @@ namespace MazeSolver
                 MessageBox.Show("(" + startX.ToString() + "," + startY.ToString() + ")", "Start Pixel");
                 MessageBox.Show("(" + endX.ToString() + "," + endY.ToString() + ")", "End Pixel");
                 //start search
-                PixelNode finish;
+                PixelNode finish = new PixelNode();
                 bool check = true;
                 
                 while (check)
                 {
-                    Console.WriteLine("Please type your prefered version of search: A, G, or U");
-                    searchType = Console.ReadLine();
-                    searchType.ToLower();
+                    
+                    MessageBox.Show("Please type your prefered version of search: A, G, or U");
+                    searchType = textBoxInput.Text;
                     switch (searchType)
                     {
                         case "u":
@@ -70,7 +93,7 @@ namespace MazeSolver
                             check = false;
                             break;
                         default:
-                            Console.WriteLine("Please type A, G, or U for your preferred search");
+                            MessageBox.Show("Please type A, G, or U for your preferred search");
                             break;
                     }
                 }
